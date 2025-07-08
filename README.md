@@ -11,3 +11,5 @@ javac -d bin src/books/*.java src/people/*.java src/inv/*.java src/Main.java
 ```sh
 java -cp bin Main
 ```
+
+## There is a PDF file and a png photo in the Test Case Screenshot folder showing the running app output
