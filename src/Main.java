@@ -19,6 +19,9 @@ public class Main {
         admin.addBook(new ShowcaseBook("33333", "Computer Science", 2022, 100.00));
 
         // Buying books by customer
+        System.out.println();
+        System.out.println("Buying books (Normal Test Cases):");
+        System.out.println("--------------------------------------------------");
 
         customer.buyBook("12345", 2, "test1@example.com", "123 Test St"); // PaperBook
         customer.buyBook("11111", 1, "test2@example.com", "456 Test Ave"); // EBook
@@ -30,25 +33,37 @@ public class Main {
 
         // Attempting to buy a book older than 20 years
 
+        System.out.println();
+        System.out.println("Attempting to buy an outdated book:");
+        System.out.println("--------------------------------------------------");
         customer.buyBook("222222", 1, "test4@example.com", "101 Test Blvd"); // EBook
         
         // Attempting to buy a book with invalid ISBN
+        System.out.println();
+        System.out.println("Attempting to buy a book with invalid ISBN:");
+        System.out.println("--------------------------------------------------");
         customer.buyBook("99999", 1, "test5@example.com", "102 Test Blvd");
 
 
         // Attempting to buy a book with insufficient stock
-
+        System.out.println();
+        System.out.println("Attempting to buy a book with insufficient stock:");
+        System.out.println("--------------------------------------------------");
         customer.buyBook("12345", 100, "test6@example.com", "103 Test Blvd");
 
         // Attempting to buy Ebook with quantity greater than 1
-
+        System.out.println();
+        System.out.println("Attempting to buy an Ebook with quantity greater than 1:");
+        System.out.println("--------------------------------------------------");
         customer.buyBook("11111", 2, "test7@example.com", "104 Test Blvd"); // EBook
 
 
         // Removing books by admin
         admin.addBook(new PaperBook("44444", "Quantum Mechanics", 2023, 60.00, 15));
         admin.removeBook("44444"); // Attempting to remove a book with null ISBN
-
+        System.out.println();
+        System.out.println("Attempting to buy a removed book:");
+        System.out.println("--------------------------------------------------");
         customer.buyBook("44444", 1, "test8@example.com", "105 Test Blvd");
     }
     
